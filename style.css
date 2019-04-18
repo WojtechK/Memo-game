@@ -1,0 +1,65 @@
+body {
+    background: #484848;
+}
+
+header {
+    color: #f2f2f2;
+    margin: 3%;
+    text-align: center;
+    font-family: arial;
+    font-size: 3.5vh;
+    letter-spacing: 4px;
+}
+
+.flex-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 70vh;
+    box-sizing: border-box;
+    perspective: 1000px;
+}
+
+.memo-card {
+    position: relative;
+    border-radius: 10px;
+    width: calc(20%);
+    height: calc(30%);
+    flex-grow: 1;
+    margin: 0.5%;
+    transition: transform 0.3s;
+    transform: scale(1);
+    transform-style: preserve-3d;
+}
+
+.memo-card:active {
+    transform: scale(0.9);
+    transition: transform .2s;
+}
+
+.memo-card.flip {
+    transform: rotateY(180deg);
+}
+
+.back {
+    font-size: 5vh;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    text-align: center;
+    font-family: arial;
+}
+
+.front {
+    font-size: 5vh;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    text-align: center;
+    font-family: arial;
+    position: absolute;
+}
+
+.memo-card:hover {
+    cursor: pointer;
+}
