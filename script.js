@@ -41,6 +41,7 @@ function CheckMatching() {
     }
 }
 
+//when cards are matched
 function disableCards() {
     firstCard.removeEventListener('click', Rotate);
     secondCard.removeEventListener('click', Rotate);
@@ -59,7 +60,8 @@ function resetBoard() {
         let random = Math.floor(Math.random() * 12)
         card.style.order = random;
     });
-})();
+})
+();
 
 
 cards.forEach(card => card.addEventListener('click', Rotate))
