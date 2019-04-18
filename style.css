@@ -26,7 +26,7 @@ header {
     position: relative;
     border-radius: 10px;
     width: calc(20%);
-    height: calc(30%);
+    height: calc(35%);
     flex-grow: 1;
     margin: 0.5%;
     transition: transform 0.3s;
@@ -44,20 +44,17 @@ header {
 }
 
 .back {
-    font-size: 5vh;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    text-align: center;
-    font-family: arial;
+    padding: 5%;
+    width: 80%;
+    height: 80%;
+    position: absolute;
 }
 
 .front {
-    font-size: 5vh;
     backface-visibility: hidden;
-    transform: rotateY(0deg);
-    text-align: center;
-    font-family: arial;
-    position: absolute;
+    transform: rotateY(0deg);  
 }
 
 .memo-card:hover {
